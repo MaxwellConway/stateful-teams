@@ -2,12 +2,20 @@ import BcCrew from "./BcCrew";
 import BinaryBots from "./BinaryBots";
 import DefaultTeam from "./DefaultTeam";
 
-export default function MainContainer({ students }) {
+export default function MainContainer({
+  students,
+  bcArray,
+  binaryArray,
+  removeFromStudents,
+}) {
   return (
     <>
-      <BcCrew />
-      <DefaultTeam students={students} />
-      <BinaryBots />
+      <BcCrew bcArray={bcArray} />
+      <DefaultTeam
+        students={students}
+        removeFromStudents={removeFromStudents}
+      />
+      <BinaryBots binaryArray={binaryArray} />
     </>
   );
 }
