@@ -10,12 +10,15 @@ export default function MainContainer({
 }) {
   return (
     <>
-      <BcCrew bcArray={bcArray} />
+      <BcCrew bcArray={bcArray} removeFromStudents={removeFromStudents} />
       <DefaultTeam
         students={students}
         removeFromStudents={removeFromStudents}
       />
-      <BinaryBots binaryArray={binaryArray} />
+      <BinaryBots
+        binaryArray={binaryArray}
+        removeFromStudents={removeFromStudents}
+      />
     </>
   );
 }

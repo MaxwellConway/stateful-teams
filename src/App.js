@@ -18,9 +18,23 @@ function App() {
   const [binaryArray, setBinaryArray] = useState([]);
 
   const removeFromStudents = (studentToRemove, targetArray) => {
-    setStudents((prevStudents) =>
-      prevStudents.filter((student) => student.name !== studentToRemove.name)
-    );
+    if (students.includes(studentToRemove) === true) {
+      setStudents((prevStudents) =>
+        prevStudents.filter((student) => student.name !== studentToRemove.name)
+      );
+    }
+
+    if (bcArray.includes(studentToRemove) === true) {
+      setBcArray((prevStudents) =>
+        prevStudents.filter((student) => student.name !== studentToRemove.name)
+      );
+    }
+
+    if (binaryArray.includes(studentToRemove) === true) {
+      setBinaryArray((prevStudents) =>
+        prevStudents.filter((student) => student.name !== studentToRemove.name)
+      );
+    }
 
     if (targetArray === "bcArray") {
       setBcArray((prevBcArray) => [...prevBcArray, studentToRemove]);

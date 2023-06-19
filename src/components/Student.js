@@ -11,16 +11,16 @@ export default function Student({ student, removeFromStudents }) {
       <img className="student-pic" src={student.img} alt="" />
       <div>
         <button
-          className="button-binary"
-          onClick={() => handleButtonClick("binaryArray")}
-        >
-          Binary Bots
-        </button>
-        <button
           className="button-bc"
           onClick={() => handleButtonClick("bcArray")}
         >
           BC Crew
+        </button>
+        <button
+          className="button-binary"
+          onClick={() => handleButtonClick("binaryArray")}
+        >
+          Binary Bots
         </button>
       </div>
     </div>
