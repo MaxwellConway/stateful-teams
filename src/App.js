@@ -46,15 +46,17 @@ function App() {
     }
   };
 
+  const resetArrays = () => {
+    const mergedArray = [...bcArray, ...binaryArray];
+    setStudents(mergedArray);
+    setBcArray([]);
+    setBinaryArray([]);
+  };
+
   return (
     <div className="topcontainer">
       <h1>Student Team React Challenge</h1>
-      <button
-        className="button-24"
-        onClick={() =>
-          console.log("I should reset you back to all being in default")
-        }
-      >
+      <button className="button-reset" onClick={resetArrays}>
         Reset
       </button>
       <div className="App">
