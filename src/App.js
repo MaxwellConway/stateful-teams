@@ -47,8 +47,7 @@ function App() {
   };
 
   const resetArrays = () => {
-    const mergedArray = [...bcArray, ...binaryArray];
-    setStudents(mergedArray);
+    setStudents(studentData);
     setBcArray([]);
     setBinaryArray([]);
   };
